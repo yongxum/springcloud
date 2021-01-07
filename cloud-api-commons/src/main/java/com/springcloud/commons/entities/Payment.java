@@ -11,7 +11,7 @@ import java.io.Serializable;
 // 还有一个指定必须参数注解 <@RequiredArgsConstructor>
 @AllArgsConstructor        //全参
 @NoArgsConstructor         //无参
-public class Payment implements Serializable {
+public class Payment extends BaseClass implements Serializable {
     private Long id;
     private String serial;
 }

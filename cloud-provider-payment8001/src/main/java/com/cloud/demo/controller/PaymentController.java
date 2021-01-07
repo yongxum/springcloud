@@ -39,4 +39,14 @@ public class PaymentController {
         return  new CommonResult(200, "查询成功, serverPort: " + serverPort,
                 payment);
     }
+
+    @GetMapping("/feign/timeOut")
+    public String paymentFeignTimeOutTest(){
+        try{
+            Thread.sleep(5000);
+        }catch (Exception exception){
+            exception.getMessage();
+        }
+        return serverPort;
+    }
 }

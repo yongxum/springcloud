@@ -18,4 +18,9 @@ public class OrderFeignController {
         return paymentFeignService.getPaymentById(id);
     }
 
+    @GetMapping("/payment/feign/timeOut")
+    public String paymentFeignTimeOutTest(){
+        return paymentFeignService.paymentFeignTimeOutTest();
+    }
+
 }
