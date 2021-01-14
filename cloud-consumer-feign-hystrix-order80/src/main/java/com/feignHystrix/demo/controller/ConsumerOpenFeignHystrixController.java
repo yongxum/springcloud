@@ -29,6 +29,7 @@ public class ConsumerOpenFeignHystrixController {
     }
 
     @GetMapping("/payment_TimeOut/{id}")
+    // 如果接口的降级服务处理全在这里, 代码会显得很臃肿, 而且解耦度比较高, 所以使用ConsumerOpenFeignHystrixServiceImpl这种处理方法很合适
     // 这个注解不管是超时, 还是报错, 都会走到paymentInfo_TimeOutHandler方法
 //    @HystrixCommand(fallbackMethod = "paymentInfo_TimeOutHandler", commandProperties = {
 //            // 设置线程超时时间, 如果超过3秒, 则走paymentInfo_TimeOutHandler方法
