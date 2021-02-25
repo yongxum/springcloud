@@ -9,4 +9,6 @@ public interface HystrixPaymentService {
     String paymentInfo_OK(Long id);
 
     String paymentInfo_TimeOut(Long id);
+
+    String paymentCircuitBreake(Long id);
 }
